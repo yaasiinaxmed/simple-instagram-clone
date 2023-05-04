@@ -3,9 +3,11 @@ import Comments from '../Comments/Comments';
 import LikeSection from './LikeSection';
 import PostHeader from './PostHeader';
 
-const Post = props => {
+const Post = (props) =>  {
   // 🔥 Make sure the parent of Post is passing the right props!
   // Hubi in component-ga ka sareysa midaan ay props sax ah soo direyso.
+  console.log(props.post);
+
   const { post } = props;
   
   // This is the state for the likes, if you pass the state correctly, the heart button should increase the likes
@@ -15,7 +17,7 @@ const Post = props => {
     
  // Function to increase the number of likes
   // Function-ka kor loogu qaado likes-ka
-
+ 
   const incrementLikes = () => {
     setLikes(likes + 1);
   };
@@ -29,7 +31,7 @@ const Post = props => {
       <div className='post-image-wrapper'>
         <img
           alt='post thumbnail'
-          className='post-image'
+          className='post-image' 
           src={post.imageUrl}
         />
       </div>
@@ -40,8 +42,8 @@ const Post = props => {
 
       {/* Comments also wants its props! */}
       {/* Fadlan u dir props-ka ay 'Comments' component u baahantahay */}
-      
-      <Comments />
+      <h1>Hello world</h1>
+      <Comments comments={post.comments}/>
     </div>
   );
 };

@@ -6,7 +6,7 @@ import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons';
 const LikeSection = props => {
   // 🔥 Make sure the parent of LikeSection is passing the right props!
   // Hubi in component-ga ka sareysa midaan ay props sax ah soo direyso.
-  console.log(props);
+  // console.log(props.incrementLikes);
   
   const { incrementLikes, numberOfLikes } = props;
 
@@ -14,8 +14,7 @@ const LikeSection = props => {
     <div>
       <div
         className='like-section'
-        key='likes-icons-container'
-      >
+        key='likes-icons-container'>
     
           {/* Add onClick function to <FontAwesomeIcon /> below and give it 'incrementLikes' function */}
           {/* Ku dar 'onClick' function <FontAwesomeIcon /> hoos ku qoran, kadibna sii 'incrementLikes'*/}
@@ -31,7 +30,7 @@ const LikeSection = props => {
           {/* Change this hard coded likes to like from props */}
           {/* Hoos waxaa ku qoran 100 likes oon la badali karin, waa inaa ka dhigtaa wax la badali karo adigoo istimaalaayo 'numberOfLikes' */}
 
-      <p className='like-number'>{numberOfLikes}</p>
+      <p className='like-number'>{numberOfLikes} Likes</p>
     </div>
   );
 };

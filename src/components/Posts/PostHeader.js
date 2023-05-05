@@ -4,7 +4,7 @@ import React from 'react';
 const PostHeader = props => {
   // 🔥 Make sure the parent of PostHeader is passing the right props!
   // Hubi in component-ga ka sareysa midaan ay props sax ah soo direyso.
-  console.log(props);
+  // console.log(props);
   
   const { thumbnailUrl, username } = props;
 
